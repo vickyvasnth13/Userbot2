@@ -241,12 +241,12 @@ async def uname_stuff(id, uname, name):
         elif old:
             await asst.send_message(
                 LOG_CHANNEL,
-                get_string("can_3").format(f"[{name}](tg://user?id={id})", old),
+                get_string("can_3").format(f"[{name},{id}](tg://user?id={id})", old),
             )
         elif uname:
             await asst.send_message(
                 LOG_CHANNEL,
-                get_string("can_4").format(f"[{name}](tg://user?id={id})", uname),
+                get_string("can_4").format(f"[{name},{id}](tg://user?id={id})", uname),
             )
 
         old_[id] = uname
